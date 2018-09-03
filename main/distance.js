@@ -4,17 +4,14 @@ var read=readline.createInterface({
     input:process.stdin,
     output:process.stdout
 });
-
-function hello()
+function distance()
 {
-    read.question("Enter your user name: ", function(name){
-        if(typeof(name)==='string'){
-            utility.hello(name);
+    read.question("Enter first distance: ", function(x){
+        read.question("Enter second distance: ", function(y){
+            utility.distance(x,y);
             read.close();
-        }
-        
         });
-        
+
+    });
 }
-    
-hello();
+distance();
